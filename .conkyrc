@@ -1,0 +1,100 @@
+# conky configuration
+#
+# The list of variables has been removed from this file in favour
+# of keeping the documentation more maintainable.
+# Check http://conky.sf.net for an up-to-date-list.
+#
+# For ideas about how to modify conky, please see:
+# http://crunchbanglinux.org/forums/topic/59/my-conky-config/
+#
+# For help with conky, please see:
+# http://crunchbanglinux.org/forums/topic/2047/conky-help/
+#
+# Enjoy! :)
+##############################################
+# Settings
+##############################################
+background yes
+use_xft yes
+xftfont Liberation Sans:size=10
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_argb_value 100
+#own_window_transparent no
+own_window_type desktop
+own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 200 200
+maximum_width 240
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color 656667
+default_shade_color 000000
+default_outline_color 828282
+alignment top_left
+gap_x 12
+gap_y 12
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+##############################################
+#  Output
+##############################################
+TEXT
+${color d35400}Do or do not... there is no try.
+${color 2980B9}${hr}
+
+${color 3489DB}S Y S T E M    I N F O
+${color 2980B9}${hr}
+${color 2ECC71}Host:$alignr${color 1abc9c}$nodename
+${color 2ECC71}Uptime:$alignr${color 1abc9c}$uptime
+#${color 2ECC71}RAM:$alignr${color 1abc9c}$mem/$memmax
+#${color 2ECC71}Swap usage:$alignr${color 1abc9c}$swap/$swapmax
+#${color 2ECC71}Disk usage:$alignr${color 1abc9c}${fs_used /}/${fs_size /}
+#${color 2ECC71}CPU usage:$alignr${color 1abc9c}${cpu cpu0}%
+
+${color 3489DB}P R O C E S S O R S 
+${color 2980B9}${hr 2}
+${color 1abc9c}${cpugraph cpu1}
+${color 2ECC71}CPU1: ${cpu cpu1}% ${cpubar cpu1}
+${color 2ECC71}CPU2: ${cpu cpu2}% ${cpubar cpu2}
+${color 2ECC71}${top_mem name 1}${alignr}${color 1abc9c}${top mem 1} %
+${color 2ECC71}${top_mem name 2}${alignr}${color 1abc9c}${top mem 2} %
+${color 2ECC71}${top_mem name 3}${alignr}${color 1abc9c}${top mem 3} %
+${color 2ECC71}${top_mem name 4}${alignr}${color 1abc9c}${top mem 4} %
+${color 2ECC71}${top_mem name 5}${alignr}${color 1abc9c}${top mem 5} %
+
+${color 3498DB}M E M O R Y 
+${color 2980B9}${hr 2}
+${color 2ECC71}RAM $alignc $mem / $memmax $alignr $memperc%
+${color 1abc9c}$membar
+
+${color 3498DB}D I S K S 
+${color 2980B9}${hr 2}
+${color 2ECC71}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
+SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
+${swapbar}
+
+${color 3489DB}S H O R T C U T    K E Y S
+${color 2980B9}${hr}
+${color 2ECC71}Alt+F2$alignr ${color 1abc9c} Run Dialog
+${color 2ECC71}Alt+F3$alignr ${color 1abc9c} Alt Menu
+${color 2ECC71}Super+Space$alignr ${color 1abc9c} Main Menu
+${color 2ECC71}Super+Tab$alignr ${color 1abc9c} Client Menu
+${color 2ECC71}Super+t$alignr ${color 1abc9c} Terminal
+${color 2ECC71}Super+f$alignr ${color 1abc9c} File Manager
+${color 2ECC71}Super+e$alignr ${color 1abc9c} Editor
+${color 2ECC71}Super+m$alignr ${color 1abc9c} Media Player
+${color 2ECC71}Super+w$alignr ${color 1abc9c} Web Browser
+${color 2ECC71}Super+h$alignr ${color 1abc9c} Task Manager
+${color 2ECC71}Super+l$alignr ${color 1abc9c} Lock Screen
+${color 2ECC71}Super+v$alignr ${color 1abc9c} Volume Control
+${color 2ECC71}Super+x$alignr ${color 1abc9c} Logout
+${color 2ECC71}PrtSc$alignr ${color 1abc9c} Screenshot
